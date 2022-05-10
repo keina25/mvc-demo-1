@@ -1,0 +1,88 @@
+*{
+    margin: 0; padding: 0;
+}
+*{
+    box-sizing: border-box;
+}
+*::before, 
+*::after{
+    box-sizing: border-box;
+}
+ol,
+ul{
+    list-style: none;
+}
+body{
+    overflow: hidden;
+}
+body > .page{
+    display: flex; /*自动排序*/
+    flex-wrap: wrap; /*自动换行*/
+}
+body > .page > section{
+    width: 50vw;  /*页面占屏幕的1/4*/
+    height: 50vh; /*页面占屏幕的1/4*/
+    border: 1px solid grey;
+}
+#app1{
+    /*border: 1px solid red;*/
+}
+#app1 .output{}
+#app1 .actions{}
+#app2{
+    /*border: 1px solid blue;*/
+}
+#app2 .tab-bar{
+    display: flex;  /*里面内容横向*/
+}
+#app2 .tab-bar > li{
+    border: 1px solid grey;
+    width: 50%;
+}
+#app2 .tab-bar > li.selected{
+    background: rgb(253, 221, 155);
+    color: white;
+}
+#app2 .tab-content{}
+
+#app2 .tab-content > li{
+    display: none;
+}
+#app2 .tab-content > li.active{
+    display: block;
+}
+/*这是基于样式与行为分离，js里面加.addClass(active)和.removeClass*/
+/*这是JS只管功能，不管你长什么样子；css只管样子，不管功能*/
+#app3{}
+#app3 .square{
+    border:1px solid grey;
+    margin-top: 10vw;
+    margin-left: 10vw;
+    width: 10vw;
+    height: 10vw;
+    transition: transform 1s; /*动画效果1s*/
+}/*宽高都是vw，那就是正方形*/
+#app3 .square.active{
+    transform: translateX(15vw);
+}
+#app4{}
+@keyframes change{
+    0% {
+        background: red;
+    }
+    100% {
+        background: blue;
+    }
+}
+#app4 .circle{
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    border: 1px solid red;   
+}
+#app4 .circle.active{
+    animation: change 1s infinite alternate linear;
+    /*infinite是无限变化，alternate是来回变化，linear是线性变化*/
+}
+
+/*# sourceMappingURL=/main.1f19ae8e.css.map */
