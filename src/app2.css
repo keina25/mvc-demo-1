@@ -1,0 +1,24 @@
+#app2{
+    /*border: 1px solid blue;*/
+}
+#app2 .tab-bar{
+    display: flex;  /*里面内容横向*/
+}
+#app2 .tab-bar > li{
+    border: 1px solid grey;
+    width: 50%;
+}
+#app2 .tab-bar > li.selected{
+    background: rgb(253, 221, 155);
+    color: white;
+}
+#app2 .tab-content{}
+
+#app2 .tab-content > li{
+    display: none;
+}
+#app2 .tab-content > li.active{
+    display: block;
+}
+/*这是基于样式与行为分离，js里面加.addClass(active)和.removeClass*/
+/*这是JS只管功能，不管你长什么样子；css只管样子，不管功能*/

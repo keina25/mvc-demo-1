@@ -1,0 +1,12 @@
+body{
+    overflow: hidden;
+}
+body > .page{
+    display: flex; /*自动排序*/
+    flex-wrap: wrap; /*自动换行*/
+}
+body > .page > section{
+    width: 50vw;  /*页面占屏幕的1/4*/
+    height: 50vh; /*页面占屏幕的1/4*/
+    border: 1px solid grey;
+}
